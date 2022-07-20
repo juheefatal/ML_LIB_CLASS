@@ -1,0 +1,19 @@
+pandas의 두가지 자료형
+
+- series : 1차원 형태의 데이터
+- DataFrame : 2차원 형태의 데이터
+
+series와 list의 차이
+- series는 index정보를 가지고 있음
+- 기본적으로는 0, 1, 2, 등의 숫자로 시작하지만 지정해주면 다른 형태로도 변경가능
+- index를 지정하는 파라미터
+	index = ___
+- column명이 존재하는 경우 특정 컬럼을 지정하는 파라미터
+	columns = [----]
+
+- team_df
+컬럼 : 'catanddog', 'toto', 'apple', 'gildong'
+	- 여러개의 컬럼을 지정하는 방법 : team_df_n = team_df[['catanddog', 'toto']]
+	- iloc, loc
+		iloc : 데이터를 선택추출하는데 번호를 이용해서 정보를 가져오는 것.
+		loc : 인덱스를 이용해서 정보를 가져오는 것.
