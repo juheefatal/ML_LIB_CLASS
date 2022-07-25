@@ -1,0 +1,58 @@
+파이썬 시각화라이브러리
+- matplotlib
+- seaborn
+- folium
+- poltly
+- pandas : 데이터 처리 및 가공
+
+데이터처리 pandas의 대표적인 자료형
+- 데이터프레임, 시리즈
+- 시리즈가 리스트와 다른점은? : 인덱스가 메모리에 저장되어 있어서 수정이 가능함
+
+numpy : 선형대수 및 수학 및 난수발생
+	딥러닝 기본 자료형 사용
+
+pandas : 딥러닝(Deep Neural Network)
+	입력층(Input Layer) - 은닉층(Hidden Layer) - 출력층(Output Layer)
+
+데이터에 의해서 결정되는 층이 두가지 있음
+	- 입력층, 출력층
+	- 연속형 변수 예측 - 츨력층 뉴런이 하나
+	- 범주형 변수 예측 - 출력층은 범주형 개수만큼 뉴런을 설정
+			- 활성화 함수는 softmax
+				- softmax 활성화함수는 값을 전부 더하면 1이 나옴
+				- 출력층의 각 뉴런에서 마지막에 출력되는 값은 '이 값이 나올 확률'을 의미
+
+활성화함수란?
+- 종류  :  sigmoid(0~1)
+	relu(0~무한) : 음수로 값이 들어오면 0으로 처리, 양수에서 무한대까지 범위까지 존재
+	
+- 활성화 함수가 있으면 선형문제 뿐만 아니라, 곡선구조인, 비선형문제까지 해결할 수 있음
+
+optimizer란?
+- 손실함수(y)를 최저값으로 만들기 위해 가중치(x)를 수정 
+- adam, rmsprop, sgd, gd등의 다양한 종류가 있음
+
+loss함수란?
+- 마지막 결과값과 실제 가진 값의 오차를 구하는 함수
+- mse(mean squared error), categorical crossentropy, binary crossentropy등의 다양한 종류가 있음
+
+CNN이 무엇일까
+- Convolution layer(합성곱 계층)과 Fooling계층을 FCL로 연결(FCL로 연결되지 않은 CNN도 있긴 함)
+- 합성곱 계층은 이미지의 값을 요약하는 역할을 함
+- Fooling은 일반적으로 down sampling하는 역할을 함
+- FCL의 단점 2가지를 극복하기 위해 CNN을 이용
+	- 입력층이 1차원 벡터구조로 되어있어서 2,3차원의 공간정보가 손실된다는 단점이 있음
+	- 파라미터의 수가 줄어든다
+		- fooling을 통해서 중요한 값만 뽑아내기 때문에 이미지가 줄어들면서도 공간정보는 그대로 유지
+		- convolution을 통해 이미지가 줄어들어서 parameter수가 감소
+
+- stride : 필터가 움직이는 크기를 지정하는 값
+- filter : 가중치를 가지고 있음. 이미지의 특징을 각 필터가 갖게되고, 원하는 부분 찾을 수 있게 됨
+
+- 특징맵(feature map) : 필터와 합성곱 연산을 통해 만들어지는 결과물
+
+- Fooling의 종류
+	- Max pooling : 가장 많이 쓰임
+	- Average pooling
+	- Min pooling
