@@ -24,7 +24,7 @@ val_accuracy: 검증셋으로 얻은 예측 정확도
 실제 검증용 데이터에 대한 오차는 일정 수준 이상부터는 큰 차이가 없다.
 ● loss그래프를 보면 학습 데이터에 대한 오차는 학습을 할수록 (에포크가 진행될수록) 줄어드는데,
 실제 검증용 데이터에 대한 오차는 일정 수준 이상부터는 큰 차이가 없다.
-● adam [ min_loss = , max_acc = 0. % ] 
+● adam [loss: 6.3743 / accuracy: 0.9264 / val_loss: 15.9140 / val_accuracy: 0.8657]
 ● RMSprop [min_loss = 5.0514, max_acc = 91.1% ]
 ● optimzer를 adam으로 돌렸을 때 보다 RMSprop으로 돌렸을 때 loss값이 더 작고, 
     굴곡의 변화도 더 적다. 그러나, 정확도 그래프에서는 adam이 더 정확도가 더 높고 
