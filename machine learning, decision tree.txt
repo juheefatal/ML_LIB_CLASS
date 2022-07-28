@@ -1,0 +1,38 @@
+# 선형모델
+· 선형방정식으로 표현됨
+· 하이퍼파라미터(임의설정가능)없음
+	모델파라미터존재
+· 특성이 하나 → 직선형
+	y = w1 * x1 + b
+· 특성이 2개 → 평면
+· 특성이 3개 이상 → 초평면
+
+# 모델
+sklearn.linear_model.___ : 선형회귀, Ridge, Lasso
+sklearn.neighbors.___     : knn 모델
+sklearn.ensemble.___     : 앙상블 모델
+sklearn.svc.___	       : 많이 쓰이는 모델은 아님
+sklearn.tree.___	       : 의사결정트리
+
+#
+import xgboost
+import lightgbm
+import catboost
+
+# 의사결정트리
+· 데이터의 학습을 통해 예측하는 방법
+· binary decision tree
+· 해석하기 수월하다는 장점이 있음
+· gini계수, entropy등의 값을 구해 특정조건 기준에 따라 node 분기해나가는 방법
+	· 다양한 방식으로 가지쳐보고 어떤조건을 선택했을때 entropy(or gini계수)낮아지는 방향으로 기준선택됨
+	· 초기 의사결정트리는 gini계수나 entropy가 0이 될 때까지 분기
+	· 가장 상위 node는 root node라고 부르고, 가장 하위 node는 leaf node라 칭함
+	· gini계수가 0 : 마지막노드(leaf node)에서 통일된 label(class)만 남는 상황. 마지막 예측하려는 target값이 하나의 범주
+	· gini 계수가 0이 될때까지 분기시 과대적합이 일어날 가능성이 높음(너무 큰 나무 모형은 과대적합가능성 높음)
+		· 나무의 깊이(root node로부터 분리되어 나가는 층 개수)를 한정해 줌
+		  나무의 깊이는 정확도(평가지표)를 기준으로 판단해보며 나무크기 조금씩 변경해보며 정하면 됨
+		· 깊이가 한정되면 마지막 노드에서 완벽하게 분리가 되어있지 않을텐데,
+		  이때 실제 데이터가 A가 10개, B가 5개라면 결과를 A라 출력
+
+
+
